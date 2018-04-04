@@ -45,7 +45,7 @@ router.delete('/:id', (req, res) => {
 //otherwise call BlogPosts.update with updated item
 router.put('/id', jsonParser, (req, res) => {
 	const requiredFields = ['title', 'content', 'author'];
-	for (let i=0; i<requiredFields.length, i++) {
+	for (let i=0; i<requiredFields.length; i++) {
 		const field = requiredFields[i];
 		if (!(field in req.body)) {
 			const message = `Missing \`${field}\` in request body`
